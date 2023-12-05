@@ -1,59 +1,31 @@
+<div class="flex flex-col items-center justify-center h-screen">
+    <Typewriter>
+        <h1 class="pb-9 text-5xl font-extrabold">What does a vegetarian zombie say?</h1>
+    </Typewriter>
+    <Button on:click={toggleVisible} size="xl" class="text-xl" outline>Reveal</Button>
+    {#if visible}
+        <h1 class="pt-9 pb-9 text-3xl">
+           GGGRRRRAAAIIINNNNSSS 
+        </h1>
+        <Button outline={true} class="!p-2 pt-9" size="lg">
+            <ThumbsUpSolid class="w-6 h-6 text-primary-700" />
+        </Button>
+        <Button outline={true} class="!p-2 pt-9" size="lg">
+            <ThumbsDownSolid class="w-6 h-6 text-primary-700" />
+        </Button>
+    {/if}
+</div>
+
 <script>
-	import Counter from './Counter.svelte';
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcome_fallback from '$lib/images/svelte-welcome.png';
+    import { Button } from 'flowbite-svelte';
+    import Typewriter from 'svelte-typewriter';
+    import { ThumbsUpSolid, ThumbsDownSolid } from 'flowbite-svelte-icons';
+
+
+    let visible = false;
+
+    function toggleVisible() {
+        visible = !visible
+    }
 </script>
 
-<svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
-</svelte:head>
-
-<section>
-	<h1>
-		<span class="welcome">
-			<picture>
-				<source srcset={welcome} type="image/webp" />
-				<img src={welcome_fallback} alt="Welcome" />
-			</picture>
-		</span>
-
-		to your new<br />SvelteKit app
-	</h1>
-
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
-
-	<Counter />
-</section>
-
-<style>
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 0.6;
-	}
-
-	h1 {
-		width: 100%;
-	}
-
-	.welcome {
-		display: block;
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
-	}
-</style>
