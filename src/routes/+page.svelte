@@ -13,6 +13,7 @@
         <Button outline={true} class="!p-2 pt-9" size="lg">
             <ThumbsDownSolid class="w-6 h-6 text-primary-700" />
         </Button>
+        <iframe src="https://giphy.com/embed/WOCEirCJycoVzDOiZ2" width="480" height="480" frameBorder="0" class="giphy-embed pt-4" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/plantsvszombies-pvz-pvzbfn-battle-for-neighborville-WOCEirCJycoVzDOiZ2"></a></p>
     {/if}
 </div>
 
