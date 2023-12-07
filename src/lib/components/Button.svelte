@@ -10,7 +10,7 @@
     }
 </script>
 
-<Button on:click={toggleVisible} size="md" class="text-md mt-9" color="red">Reveal</Button>
+<Button on:click={toggleVisible} size="md" class="text-md mt-7" color="red">Reveal</Button>
 {#if visible}
     <Card class="mt-9">
         <h2 class="mb-3 text-xl dark:text-white">
