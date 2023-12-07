@@ -1,7 +1,7 @@
 <script>
     import { Button } from 'flowbite-svelte';
-    import { ThumbsUpSolid, ThumbsDownSolid, ArrowRightSolid } from 'flowbite-svelte-icons';
-
+    import { Card } from 'flowbite-svelte';
+    import { ArrowRightOutline } from 'flowbite-svelte-icons';
 
     let visible = false;
 
@@ -10,9 +10,14 @@
     }
 </script>
 
-<Button on:click={toggleVisible} size="md" class="text-lg mt-9" color="red">Reveal</Button>
+<Button on:click={toggleVisible} size="md" class="text-md mt-9" color="red">Reveal</Button>
 {#if visible}
-    <h1 class="pt-9 pb-9 text-xl dark:text-white">
-        GGGRRRRAAAIIINNNNSSS 
-    </h1>
+    <Card class="mt-9">
+        <h2 class="mb-3 text-xl dark:text-white">
+            GGGRRRRAAAIIINNNNSSS 
+        </h2>
+        <Button class="flex justify-center items-center" color="red">
+            Ready For More?
+        </Button>
+    </Card>
 {/if}
