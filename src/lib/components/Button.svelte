@@ -3,6 +3,10 @@
     import { Card } from 'flowbite-svelte';
     import { ArrowRightOutline } from 'flowbite-svelte-icons';
 
+    let question;
+    let puns;
+    export let data;
+
     let visible = false;
 
     function toggleVisible() {
@@ -14,7 +18,7 @@
 {#if visible}
     <Card class="mt-9">
         <h2 class="mb-3 text-xl dark:text-white">
-            GGGRRRRAAAIIINNNNSSS 
+            {puns.answer} 
         </h2>
         <Button class="flex justify-center items-center" color="red">
             Ready For More?
