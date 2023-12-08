@@ -3,9 +3,7 @@
     import { Card } from 'flowbite-svelte';
     import { ArrowRightOutline } from 'flowbite-svelte-icons';
 
-    let question;
-    let puns;
-    export let data;
+    export const question;
 
     let visible = false;
 
@@ -18,7 +16,7 @@
 {#if visible}
     <Card class="mt-9">
         <h2 class="mb-3 text-xl dark:text-white">
-            {puns.answer} 
+            {article.question} 
         </h2>
         <Button class="flex justify-center items-center" color="red">
             Ready For More?

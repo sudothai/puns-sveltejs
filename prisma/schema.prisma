@@ -7,7 +7,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Puns {
+model Pun {
   id       Int @id @unique @default(autoincrement())
   question String
   answer   String
