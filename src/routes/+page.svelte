@@ -3,10 +3,10 @@
     import Question from "$lib/components/Question.svelte";
     import Button from "$lib/components/Button.svelte";
 
-    import type { PageData } from "./$types"
+    // import type { PageData } from "./$types"
 
-    export let data: PageData
-    $: ({ puns } = data) 
+    // export let data: PageData
+    // $: ({ puns } = data) 
 </script>
 
 <div class="flex flex-col items-center justify-center h-screen">
@@ -14,8 +14,8 @@
     <Question />
     <Button />
 
-    <h1>This is {puns.question}</h1>   
-    <h1>That is {puns.answer}</h1>   
+    <!-- <h1>This is {puns.question}</h1>   
+    <h1>That is {puns.answer}</h1>    -->
 </div>
 
 <div>
